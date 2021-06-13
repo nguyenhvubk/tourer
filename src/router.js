@@ -1,5 +1,6 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHistory } from 'vue-router';
 import VehiclesList from './pages/vehicles/VehiclesList.vue';
+import TripsCalendar from './pages/trips/TripsCalendar.vue';
 
 const router = createRouter({
   history: createWebHistory(),
@@ -14,7 +15,7 @@ const router = createRouter({
     //     { path: "contact", component: ContactCoach }, // /coaches/c1/contact
     //   ],
     // },
-    // { path: "/register", component: CoachRegistation },
+    { path: "/calendar", component: TripsCalendar },
     // { path: "/requests", component: RequestsReceived },
     // { path: "/:notFound(.*)", component: NotFound },
   ],

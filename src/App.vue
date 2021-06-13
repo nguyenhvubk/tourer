@@ -1,19 +1,14 @@
 <template>
   <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
   <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-  <vehicles-list />
-  
+  <router-view />  
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
-import VehiclesList from './pages/vehicles/VehiclesList.vue'
 
 export default {
   name: 'App',
   components: {
-    // HelloWorld,
-    VehiclesList
   }
 }
 </script>
@@ -23,8 +18,8 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  /* text-align: center; */
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 30px;
 }
 </style>
