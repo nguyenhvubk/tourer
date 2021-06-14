@@ -16,7 +16,7 @@ export default {
     VehicleCard,
   },
   data() {
-    return this.$store.state.VehicleStore;
+    return this.$store.state.vehicles;
   },
   methods: {
     

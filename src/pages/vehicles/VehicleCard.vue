@@ -42,9 +42,9 @@
       </div>
       <div class="card">
         <footer class="card-footer">
-          <a href="#" class="card-footer-item">Details</a>
-          <a href="#" class="card-footer-item">Edit</a>
-          <a href="#" class="card-footer-item">Delete</a>
+          <a @click="toDetails" class="card-footer-item">Details</a>
+          <a class="card-footer-item">Edit</a>
+          <a class="card-footer-item">Delete</a>
         </footer>
       </div>
     </div>
@@ -53,6 +53,11 @@
 
 <script>
 export default {
-  props: ['vehicle']
+  props: ['vehicle'],
+  methods: {
+    toDetails () {
+      this.$router.push('/vehicles/' + this.vehicle.id)
+    }
+  },
 };
 </script>

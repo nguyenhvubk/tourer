@@ -1,9 +1,11 @@
 import { createStore } from 'vuex'
 import VehicleStore from './VehicleStore.js'
+import TripStore from './TripStore.js'
 
 const store = createStore({
   modules: {
-    VehicleStore,
+    vehicles: VehicleStore,
+    trips: TripStore
   },
 });
 
