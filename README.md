@@ -22,3 +22,12 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+TODO: for demo
+- 404 page
+
+- Add firebase integration
+
+- Authentication
+
+- Styling optimization

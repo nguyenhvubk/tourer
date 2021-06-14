@@ -409,12 +409,12 @@ body {
 /* These styles are optional, to illustrate the flexbility of styling the calendar purely with CSS. */
 
 /* Add some styling for items tagged with the "birthday" class */
-.theme-default .cv-item.birthday {
+.theme-default .cv-item.b.i.r.t.h.d.a.y {
   background-color: #e0f0e0;
   border-color: #d7e7d7;
 }
 
-.theme-default .cv-item.birthday::before {
+.theme-default .cv-item.b.i.r.t.h.d.a.y::before {
   content: "\1F382"; /* Birthday cake */
   margin-right: 0.5em;
 }
