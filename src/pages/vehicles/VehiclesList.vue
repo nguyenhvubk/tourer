@@ -1,17 +1,11 @@
 <template>
-  <div class="columns">
-    <div class="column">
-      <vehicle-card />
-    </div>
-    <div class="column">
-      <vehicle-card />
-    </div>
-    <div class="column">
-      <vehicle-card />
-    </div>
-    <div class="column">
-      <vehicle-card />
-    </div>
+  <h1 class="title">Your vehicles list</h1>
+  <div class="columns is-multiline is-mobile">
+    <vehicle-card
+      v-for="vehicle in vehicles"
+      :key="vehicle.id"
+      :vehicle="vehicle"
+    />
   </div>
 </template>
 
@@ -21,5 +15,11 @@ export default {
   components: {
     VehicleCard,
   },
+  data() {
+    return this.$store.state.VehicleStore;
+  },
+  methods: {
+    
+  }
 };
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div id="calendar">
+  <div class="container" id="calendar">
     <div class="calendar-controls">
       <div v-if="message" class="notification is-success">{{ message }}</div>
 
@@ -226,6 +226,13 @@ export default {
           classes: "purple",
         },
         {
+          id: '1',
+          title: 'Sai Gon - Ha Noi',
+          vehicleId: '1',
+          startDate: this.thisMonth(5),
+          endDate: this.thisMonth(12),
+        },
+        {
           id: "foo",
           startDate: this.thisMonth(29),
           title: "Same day 1",
@@ -375,12 +382,12 @@ body {
   display: flex;
   flex-direction: row;
   font-family: Calibri, sans-serif;
-  width: 95vw;
+  /* width: 95vw; */
   min-width: 30rem;
   max-width: 100rem;
   min-height: 40rem;
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto;
+  margin-right: auto; */
 }
 
 .calendar-controls {
