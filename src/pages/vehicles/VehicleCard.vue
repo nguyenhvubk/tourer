@@ -1,18 +1,19 @@
 <template>
   <div
     class="column is-one-quarter-desktop is-one-third-tablet is-one-quarter-widescreen"
+    @click="toDetails"
   >
     <div class="card">
       <div class="card-header">
         <p class="card-header-title">
-          {{vehicle.brand + " " + vehicle.name}}
+          {{ vehicleFullName }}
         </p>
       </div>
       <div class="card-image">
         <figure class="image is-4by3">
           <img
             src="../../assets/bmw.jpg"
-            :alt="vehicle.brand + ' ' + vehicle.name"
+            :alt="vehicleFullName"
           />
         </figure>
       </div>
@@ -59,5 +60,10 @@ export default {
       this.$router.push('/vehicles/' + this.vehicle.id)
     }
   },
+  computed: {
+    vehicleFullName() {
+      return this.vehicle.brand + ' ' + this.vehicle.name;
+    }
+  }
 };
 </script>

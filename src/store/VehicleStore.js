@@ -29,7 +29,8 @@ export default {
           name: 'Acent',
           brand: 'Hyundai',
         }
-      ]
+      ],
+      vehicle: {}
     };
   },
   // mutations,
@@ -37,6 +38,23 @@ export default {
   getters: {
     all(state) {
       return state.vehicles;
+    },
+    one(state){
+      return state.vehicle;
+    }
+  },
+  mutations: {
+    one(state, id) {
+      state.vehicle = state.vehicles.find(v => v.id === id)
+      return state;
+    }
+  },
+  actions: {
+    async getVehicleById(context, id) {
+      // setTimeout(() => {
+      //   context.commit('one', id);
+      // }, 3000)
+      context.commit('one', id);
     }
   }
 };

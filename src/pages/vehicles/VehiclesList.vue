@@ -1,5 +1,5 @@
 <template>
-  <h1 class="title">Your vehicles list</h1>
+  <h1 class="title is-4">Your vehicles list</h1>
   <div class="columns is-multiline is-mobile">
     <vehicle-card
       v-for="vehicle in vehicles"

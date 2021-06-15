@@ -30,9 +30,11 @@
         <a class="navbar-item">
           <router-link to="/vehicles">Vehicles</router-link>
         </a>
-
         <a class="navbar-item">
           <router-link to="/calendar">Calendar</router-link>
+        </a>
+        <a class="navbar-item">
+          <router-link to="/drivers">Drivers</router-link>
         </a>
       </div>
 
