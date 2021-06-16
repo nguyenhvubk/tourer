@@ -3,6 +3,7 @@ import App from './App.vue'
 
 // import "bootstrap/dist/css/bootstrap.min.css"
 // import "bootstrap"
+import 'bulma/css/bulma.css'
 
 import router from './router.js';
 import store from './store/index.js';

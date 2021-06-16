@@ -4,6 +4,7 @@ import TripsCalendar from './pages/trips/TripsCalendar.vue'
 import VehicleDetails from './pages/vehicles/VehicleDetails.vue'
 import DriversList from './pages/drivers/DriversList.vue'
 import NotFound from './pages/NotFound.vue'
+import Analytics from './pages/analytics/Analytics.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -20,6 +21,7 @@ const router = createRouter({
     },
     { path: "/calendar", component: TripsCalendar },
     { path: "/drivers", component: DriversList },
+    { path: "/analytics", component: Analytics },
     { path: "/:notFound(.*)", component: NotFound },
   ],
 });

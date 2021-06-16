@@ -36,6 +36,9 @@
         <a class="navbar-item">
           <router-link to="/drivers">Drivers</router-link>
         </a>
+        <a class="navbar-item">
+          <router-link to="/analytics">Analytics</router-link>
+        </a>
       </div>
 
       <div class="navbar-end">

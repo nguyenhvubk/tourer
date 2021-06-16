@@ -24,10 +24,17 @@ yarn lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 TODO: for demo
-- 404 page
+- 404 page -done
+- vehicles:
+  - search bar
+- trips:
+  - add price
+- chart implement:
+  - chart for best revenue: unit: year and vehicle 
+- Deploy to firebase
 
-- Add firebase integration
-
+for staging
+- DB structure design
+- firebase DB implement
 - Authentication
-
 - Styling optimization

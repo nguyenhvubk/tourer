@@ -16,8 +16,9 @@ export default {
   },
   data() {
     return this.$store.state.vehicles; // OK
+    // return this.$store.state.vehicles.vehicle; // not OK
     // return {
-    //   vehicle: {},
+    //   vehicle: {},//have to update the state
     // }
   },
   created() {
