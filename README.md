@@ -24,9 +24,9 @@ yarn lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 TODO: for demo
-- 404 page -done
+- 404 page - done
 - vehicles:
-  - search bar
+  - search bar - done
 - trips:
   - add price
 - chart implement:
