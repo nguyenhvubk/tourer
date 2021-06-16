@@ -6,7 +6,7 @@
     </div> -->
     <div class="field-body">
       <div class="field">
-        <p class="control is-expanded has-icons-left">
+        <div class="control has-icons-left has-icons-right">
           <input
             class="input"
             type="text"
@@ -15,7 +15,10 @@
           <span class="icon is-small is-left">
             <i class="fas fa-car-side"></i>
           </span>
-        </p>
+          <span class="icon is-small is-right">
+            <i class="fas fa-search"></i>
+          </span>
+        </div>
       </div>
       <div class="field">
         <div class="control is-expanded has-icons-left">

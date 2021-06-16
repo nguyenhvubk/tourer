@@ -25,7 +25,7 @@ html,
 body {
   height: 100%;
   margin: 0;
-  background-color: #f7fcff;
+  background-color: #f7fcff !important;
 }
 #app {
   /* font-family: Avenir, Helvetica, Arial, sans-serif;
