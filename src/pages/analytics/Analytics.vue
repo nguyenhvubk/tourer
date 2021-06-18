@@ -54,7 +54,12 @@ export default {
               beginAtZero: true,
               ticks: {
                 callback: function(value) {
-                  return `${value} VND`;
+                  let nghin = value/1000;
+                  let tram = value % 1000;
+                  if (tram === 0) {
+                    tram = '000'
+                  }
+                  return `${nghin}.${tram} VND`;
                 }
               }
             }

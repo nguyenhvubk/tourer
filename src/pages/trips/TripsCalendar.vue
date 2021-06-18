@@ -177,7 +177,7 @@ export default {
       /* Show the current month, and give it some fake items to show */
       showDate: this.thisMonth(1),
       message: '',
-      startingDayOfWeek: 0,
+      startingDayOfWeek: 1,
       disablePast: false,
       disableFuture: false,
       displayPeriodUom: 'month',
@@ -216,7 +216,7 @@ export default {
           id: 'e4',
           startDate: this.thisMonth(20),
           title: 'My Birthday!',
-          classes: 'birthday',
+          classes: ['birthday'],
           url: 'https://en.wikipedia.org/wiki/Birthday'
         },
         {
@@ -224,7 +224,7 @@ export default {
           startDate: this.thisMonth(5),
           endDate: this.thisMonth(12),
           title: 'Multi-day item',
-          classes: 'purple'
+          classes: ['purple']
         },
         {
           id: '1',
@@ -242,7 +242,7 @@ export default {
           id: 'e6',
           startDate: this.thisMonth(29),
           title: 'Same day 2',
-          classes: 'orange'
+          classes: ['orange']
         },
         {
           id: 'e7',
@@ -253,18 +253,20 @@ export default {
           id: 'e8',
           startDate: this.thisMonth(29),
           title: 'Same day 4',
-          classes: 'orange'
+          classes: ['orange']
         },
         {
           id: 'e9',
-          startDate: this.thisMonth(29),
-          title: 'Same day 5'
+          startDate: '2021/6/16',
+          endDate: '2021/6/18',
+          title: 'Same day 5',
+          classes: ['yellow']
         },
         {
           id: 'e10',
           startDate: this.thisMonth(29),
           title: 'Same day 6',
-          classes: 'orange'
+          classes: ['orange']
         },
         {
           id: 'e11',
@@ -419,12 +421,12 @@ body {
 /* These styles are optional, to illustrate the flexbility of styling the calendar purely with CSS. */
 
 /* Add some styling for items tagged with the "birthday" class */
-.theme-default .cv-item.b.i.r.t.h.d.a.y {
+.theme-default .cv-item.birthday {
   background-color: #e0f0e0;
   border-color: #d7e7d7;
 }
 
-.theme-default .cv-item.b.i.r.t.h.d.a.y::before {
+.theme-default .cv-item.birthday::before {
   content: '\1F382'; /* Birthday cake */
   margin-right: 0.5em;
 }

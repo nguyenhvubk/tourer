@@ -68,12 +68,17 @@ having to override as much.
 	text-overflow: ellipsis;
 }
 
-.theme-default .cv-item.p.u.r.p.l.e {
+.theme-default .cv-item.purple {
 	background-color: #f0e0ff;
 	border-color: #e7d7f7;
 }
 
-.theme-default .cv-item.o.r.a.n.g.e {
+.theme-default .cv-item.yellow {
+	background-color: #e2f865;
+	border-color: #e2f865;
+}
+
+.theme-default .cv-item.orange {
 	background-color: #ffe7d0;
 	border-color: #f7e0c7;
 }

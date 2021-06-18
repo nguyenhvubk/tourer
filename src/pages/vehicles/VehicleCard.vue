@@ -41,13 +41,13 @@
           <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
         </div>
       </div>
-      <div class="card">
+      <!-- <div class="card">
         <footer class="card-footer">
           <a @click="toDetails" class="card-footer-item">Details</a>
           <a class="card-footer-item">Edit</a>
           <a class="card-footer-item">Delete</a>
         </footer>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>

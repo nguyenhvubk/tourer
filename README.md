@@ -31,7 +31,9 @@ TODO: for demo
   - add price
 - chart implement:
   - chart for best revenue: unit: year and vehicle 
-- Deploy to firebase
+- Deploy to firebase - done
+- add vehicle deitals 
+- add trip details
 
 for staging
 - DB structure design

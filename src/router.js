@@ -19,7 +19,7 @@ const router = createRouter({
     //     { path: "contact", component: ContactCoach }, // /coaches/c1/contact
     //   ],
     },
-    { path: "/calendar", component: TripsCalendar },
+    { path: "/trips", component: TripsCalendar },
     { path: "/drivers", component: DriversList },
     { path: "/analytics", component: Analytics },
     { path: "/:notFound(.*)", component: NotFound },

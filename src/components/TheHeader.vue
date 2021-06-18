@@ -34,8 +34,8 @@
         <a class="navbar-item" @click="$router.push('/vehicles')">
           Vehicles
         </a>
-        <a class="navbar-item" @click="$router.push('/calendar')">
-          Calendar
+        <a class="navbar-item" @click="$router.push('/trips')">
+          Trips
         </a>
         <a class="navbar-item" @click="$router.push('/drivers')">
           Drivers
