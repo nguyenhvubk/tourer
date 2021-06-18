@@ -10,7 +10,7 @@
           <input
             class="input"
             type="text"
-            placeholder="Search for your vehicle number..."
+            placeholder="Enter your vehicle number..."
           />
           <span class="icon is-small is-left">
             <i class="fas fa-car-side"></i>

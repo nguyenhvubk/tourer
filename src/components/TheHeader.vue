@@ -16,7 +16,7 @@
         aria-label="menu"
         aria-expanded="false"
         data-target="navbarBasicExample"
-        @click ="showNav = !showNav"
+        @click="showNav = !showNav"
         :class="{ 'is-active': showNav }"
       >
         <span aria-hidden="true"></span>
@@ -25,19 +25,23 @@
       </a>
     </div>
 
-    <div id="navbarBasicExample" class="navbar-menu" :class="{ 'is-active': showNav }">
+    <div
+      id="navbarBasicExample"
+      class="navbar-menu"
+      :class="{ 'is-active': showNav }"
+    >
       <div class="navbar-start">
-        <a class="navbar-item">
-          <router-link to="/vehicles">Vehicles</router-link>
+        <a class="navbar-item" @click="$router.push('/vehicles')">
+          Vehicles
         </a>
-        <a class="navbar-item">
-          <router-link to="/calendar">Calendar</router-link>
+        <a class="navbar-item" @click="$router.push('/calendar')">
+          Calendar
         </a>
-        <a class="navbar-item">
-          <router-link to="/drivers">Drivers</router-link>
+        <a class="navbar-item" @click="$router.push('/drivers')">
+          Drivers
         </a>
-        <a class="navbar-item">
-          <router-link to="/analytics">Analytics</router-link>
+        <a class="navbar-item" @click="$router.push('/analytics')">
+          Analytics
         </a>
       </div>
 
@@ -62,7 +66,7 @@ export default {
   data() {
     return {
       showNav: false
-    }
-  },
+    };
+  }
 };
 </script>

@@ -1,39 +1,39 @@
 <template>
   <div class="calendar-parent">
-      <calendar-view
-        :items="items"
-        :show-date="showDate"
-        :time-format-options="{ hour: 'numeric', minute: '2-digit' }"
-        :enable-drag-drop="true"
-        :disable-past="disablePast"
-        :disable-future="disableFuture"
-        :show-times="showTimes"
-        :date-classes="myDateClasses"
-        :display-period-uom="displayPeriodUom"
-        :display-period-count="displayPeriodCount"
-        :starting-day-of-week="startingDayOfWeek"
-        :class="themeClasses"
-        :period-changed-callback="periodChanged"
-        :current-period-label="useTodayIcons ? 'icons' : ''"
-        :displayWeekNumbers="displayWeekNumbers"
-        :enable-date-selection="true"
-        :selection-start="selectionStart"
-        :selection-end="selectionEnd"
-        @date-selection-start="setSelection"
-        @date-selection="setSelection"
-        @date-selection-finish="finishSelection"
-        @drop-on-date="onDrop"
-        @click-date="onClickDay"
-        @click-item="onClickItem"
-      >
-        <template v-slote:header #header="{ headerProps }">
-          <calendar-view-header
-            :header-props="headerProps"
-            @input="setShowDate"
-          />
-        </template>
-      </calendar-view>
-    </div> 
+    <calendar-view
+      :items="items"
+      :show-date="showDate"
+      :time-format-options="{ hour: 'numeric', minute: '2-digit' }"
+      :enable-drag-drop="true"
+      :disable-past="disablePast"
+      :disable-future="disableFuture"
+      :show-times="showTimes"
+      :date-classes="myDateClasses"
+      :display-period-uom="displayPeriodUom"
+      :display-period-count="displayPeriodCount"
+      :starting-day-of-week="startingDayOfWeek"
+      :class="themeClasses"
+      :period-changed-callback="periodChanged"
+      :current-period-label="useTodayIcons ? 'icons' : ''"
+      :displayWeekNumbers="displayWeekNumbers"
+      :enable-date-selection="true"
+      :selection-start="selectionStart"
+      :selection-end="selectionEnd"
+      @date-selection-start="setSelection"
+      @date-selection="setSelection"
+      @date-selection-finish="finishSelection"
+      @drop-on-date="onDrop"
+      @click-date="onClickDay"
+      @click-item="onClickItem"
+    >
+      <template v-slote:header #header="{ headerProps }">
+        <calendar-view-header
+          :header-props="headerProps"
+          @input="setShowDate"
+        />
+      </template>
+    </calendar-view>
+  </div>
   <!-- <div id="calendar">
      
   </div> -->
@@ -153,9 +153,9 @@
 </template>
 <script>
 // Load CSS from the published version
-import "../../../node_modules/vue-simple-calendar/dist/style.css";
-import "../../../node_modules/vue-simple-calendar/static/css/default.css";
-import "../../../node_modules/vue-simple-calendar/static/css/holidays-us.css";
+import '../../css/style.css';
+import '../../css/default.css';
+import '../../css/holidays-us.css';
 // Load CSS from the local repo
 //require("../../vue-simple-calendar/static/css/default.css")
 //require("../../vue-simple-calendar/static/css/holidays-us.css")
@@ -163,115 +163,115 @@ import "../../../node_modules/vue-simple-calendar/static/css/holidays-us.css";
 import {
   CalendarView,
   CalendarViewHeader,
-  CalendarMath,
-} from "vue-simple-calendar"; // published version
+  CalendarMath
+} from 'vue-simple-calendar'; // published version
 //} from "../../vue-simple-calendar/src/components/bundle.js" // local repo
 
 export default {
   components: {
     CalendarView,
-    CalendarViewHeader,
+    CalendarViewHeader
   },
   data() {
     return {
       /* Show the current month, and give it some fake items to show */
       showDate: this.thisMonth(1),
-      message: "",
+      message: '',
       startingDayOfWeek: 0,
       disablePast: false,
       disableFuture: false,
-      displayPeriodUom: "month",
+      displayPeriodUom: 'month',
       displayPeriodCount: 1,
       displayWeekNumbers: false,
       showTimes: true,
       selectionStart: null,
       selectionEnd: null,
-      newItemTitle: "",
-      newItemStartDate: "",
-      newItemEndDate: "",
+      newItemTitle: '',
+      newItemStartDate: '',
+      newItemEndDate: '',
       useDefaultTheme: true,
       useHolidayTheme: true,
       useTodayIcons: false,
       items: [
         {
-          id: "e0",
-          startDate: "2018-01-05",
+          id: 'e0',
+          startDate: '2018-01-05'
         },
         {
-          id: "e1",
-          startDate: this.thisMonth(15, 18, 30),
+          id: 'e1',
+          startDate: this.thisMonth(15, 18, 30)
         },
         {
-          id: "e2",
+          id: 'e2',
           startDate: this.thisMonth(15),
-          title: "Single-day item with a long title",
+          title: 'Single-day item with a long title'
         },
         {
-          id: "e3",
+          id: 'e3',
           startDate: this.thisMonth(7, 9, 25),
           endDate: this.thisMonth(10, 16, 30),
-          title: "Multi-day item with a long title and times",
+          title: 'Multi-day item with a long title and times'
         },
         {
-          id: "e4",
+          id: 'e4',
           startDate: this.thisMonth(20),
-          title: "My Birthday!",
-          classes: "birthday",
-          url: "https://en.wikipedia.org/wiki/Birthday",
+          title: 'My Birthday!',
+          classes: 'birthday',
+          url: 'https://en.wikipedia.org/wiki/Birthday'
         },
         {
-          id: "e5",
+          id: 'e5',
           startDate: this.thisMonth(5),
           endDate: this.thisMonth(12),
-          title: "Multi-day item",
-          classes: "purple",
+          title: 'Multi-day item',
+          classes: 'purple'
         },
         {
           id: '1',
           title: 'Sai Gon - Ha Noi',
           vehicleId: '1',
           startDate: this.thisMonth(5),
-          endDate: this.thisMonth(12),
+          endDate: this.thisMonth(12)
         },
         {
-          id: "foo",
+          id: 'foo',
           startDate: this.thisMonth(29),
-          title: "Same day 1",
+          title: 'Same day 1'
         },
         {
-          id: "e6",
+          id: 'e6',
           startDate: this.thisMonth(29),
-          title: "Same day 2",
-          classes: "orange",
+          title: 'Same day 2',
+          classes: 'orange'
         },
         {
-          id: "e7",
+          id: 'e7',
           startDate: this.thisMonth(29),
-          title: "Same day 3",
+          title: 'Same day 3'
         },
         {
-          id: "e8",
+          id: 'e8',
           startDate: this.thisMonth(29),
-          title: "Same day 4",
-          classes: "orange",
+          title: 'Same day 4',
+          classes: 'orange'
         },
         {
-          id: "e9",
+          id: 'e9',
           startDate: this.thisMonth(29),
-          title: "Same day 5",
+          title: 'Same day 5'
         },
         {
-          id: "e10",
+          id: 'e10',
           startDate: this.thisMonth(29),
-          title: "Same day 6",
-          classes: "orange",
+          title: 'Same day 6',
+          classes: 'orange'
         },
         {
-          id: "e11",
+          id: 'e11',
           startDate: this.thisMonth(29),
-          title: "Same day 7",
-        },
-      ],
+          title: 'Same day 7'
+        }
+      ]
     };
   },
   computed: {
@@ -279,13 +279,13 @@ export default {
       return CalendarMath.getDefaultBrowserLocale;
     },
     dayNames() {
-      return CalendarMath.getFormattedWeekdayNames(this.userLocale, "long", 0);
+      return CalendarMath.getFormattedWeekdayNames(this.userLocale, 'long', 0);
     },
     themeClasses() {
       return {
-        "theme-default": this.useDefaultTheme,
-        "holiday-us-traditional": this.useHolidayTheme,
-        "holiday-us-official": this.useHolidayTheme,
+        'theme-default': this.useDefaultTheme,
+        'holiday-us-traditional': this.useHolidayTheme,
+        'holiday-us-official': this.useHolidayTheme
       };
     },
     myDateClasses() {
@@ -298,13 +298,13 @@ export default {
       const theFirst = this.thisMonth(1);
       const ides = [2, 4, 6, 9].includes(theFirst.getMonth()) ? 15 : 13;
       const idesDate = this.thisMonth(ides);
-      o[CalendarMath.isoYearMonthDay(idesDate)] = "ides";
+      o[CalendarMath.isoYearMonthDay(idesDate)] = 'ides';
       o[CalendarMath.isoYearMonthDay(this.thisMonth(21))] = [
-        "do-you-remember",
-        "the-21st",
+        'do-you-remember',
+        'the-21st'
       ];
       return o;
-    },
+    }
   },
   mounted() {
     this.newItemStartDate = CalendarMath.isoYearMonthDay(CalendarMath.today());
@@ -360,14 +360,14 @@ export default {
         endDate: this.newItemEndDate,
         title: this.newItemTitle,
         id:
-          "e" +
+          'e' +
           Math.random()
             .toString(36)
-            .substr(2, 10),
+            .substr(2, 10)
       });
-      this.message = "You added a calendar item!";
-    },
-  },
+      this.message = 'You added a calendar item!';
+    }
+  }
 };
 </script>
 
@@ -404,8 +404,8 @@ body {
   overflow-x: hidden;
   overflow-y: hidden;
   /* max-height: 80vh; */
-  min-height: 85vh;
-  /* min-height: 36rem; */
+  /* min-height: 85vh; */
+  min-height: 40rem;
   background-color: white;
 }
 
@@ -425,7 +425,7 @@ body {
 }
 
 .theme-default .cv-item.b.i.r.t.h.d.a.y::before {
-  content: "\1F382"; /* Birthday cake */
+  content: '\1F382'; /* Birthday cake */
   margin-right: 0.5em;
 }
 
@@ -435,10 +435,10 @@ body {
 }
 
 .ides .cv-day-number::before {
-  content: "\271D";
+  content: '\271D';
 }
 
 .cv-day.do-you-remember.the-21st .cv-day-number::after {
-  content: "\1F30D\1F32C\1F525";
+  content: '\1F30D\1F32C\1F525';
 }
 </style>
