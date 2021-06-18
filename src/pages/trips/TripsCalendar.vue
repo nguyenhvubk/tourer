@@ -329,9 +329,17 @@ export default {
       this.selectionStart = null;
       this.selectionEnd = null;
       this.message = `You clicked: ${d.toLocaleDateString()}`;
+      setTimeout(() => {
+        this.message = ''
+      }, 2000)
     },
     onClickItem(e) {
       this.message = `You clicked: ${e.title}`;
+      // console.log(e.originalItem)
+      // setTimeout(() => {
+      //   this.message = ''
+      // }, 3000)
+      this.$router.push('/trips/' + e.id)
     },
     setShowDate(d) {
       this.message = `Changing calendar view to ${d.toLocaleDateString()}`;

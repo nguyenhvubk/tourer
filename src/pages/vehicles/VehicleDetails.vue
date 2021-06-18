@@ -64,6 +64,9 @@
       </div>
     </div>
   </div>
+  <div v-else>
+    <not-found-404 />
+  </div>
 </template>
 
 <script>

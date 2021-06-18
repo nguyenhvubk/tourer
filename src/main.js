@@ -7,11 +7,13 @@ import 'bulma/css/bulma.css'
 
 import router from './router.js';
 import store from './store/index.js';
+import NotFound from './pages/NotFound.vue'
 
 const app = createApp(App);
 
 app.use(router);
 app.use(store);
+app.component('not-found-404', NotFound)
 
 app.mount('#app');
 
