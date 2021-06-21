@@ -31,16 +31,16 @@
       :class="{ 'is-active': showNav }"
     >
       <div class="navbar-start">
-        <a class="navbar-item" @click="$router.push('/vehicles')">
+        <a class="navbar-item" @click="$router.push('/vehicles'); showNav = !showNav">
           Vehicles
         </a>
-        <a class="navbar-item" @click="$router.push('/trips')">
+        <a class="navbar-item" @click="$router.push('/trips'); showNav = !showNav">
           Trips
         </a>
-        <a class="navbar-item" @click="$router.push('/drivers')">
+        <a class="navbar-item" @click="$router.push('/drivers'); showNav = !showNav">
           Drivers
         </a>
-        <a class="navbar-item" @click="$router.push('/analytics')">
+        <a class="navbar-item" @click="$router.push('/analytics'); showNav = !showNav">
           Analytics
         </a>
       </div>

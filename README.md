@@ -28,17 +28,20 @@ TODO: for demo
 - vehicles:
   - search bar - done
 - trips:
-  - add price
+  - add price - done
 - chart implement:
-  - chart for best revenue: unit: year and vehicle 
+  - chart for best revenue: unit: year and vehicle - done for now
 - Deploy to firebase - done
-- add vehicle deitals 
+- add vehicle deitals - done
+  - add new vehicle - done
 - add trip details
+- handle router scroll behavior
+- auth
+ - login
 
 for staging
 - DB structure design
 - firebase DB implement
-- Authentication
 - Styling optimization
 
 draff of db structure
@@ -59,7 +62,8 @@ draff of db structure
   },
   "vehicles": {
     "vehicle_id1": {
-      "brand": "toyota",
+      "brand": "Toyota",
+      "name": "Vios"
       //other nessesary information
       "driver": "driver_id1",
       "tag": "color"
@@ -70,7 +74,13 @@ draff of db structure
       "vehicle": "vehicle_id1",
       "company": "company_id1"
     }
-  }
+  },
+  "vehicles_mainternance": {
+    "generatedID": {
+      "vehicle": "vehicle_id1",
+      //other nessesary information
+    }
+  },
   "drivers": {
     "driver_id1": {
       //some information

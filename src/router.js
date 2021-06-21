@@ -3,6 +3,7 @@ import VehiclesList from './pages/vehicles/VehiclesList.vue';
 import TripsCalendar from './pages/trips/TripsCalendar.vue';
 import TripDetails from './pages/trips/TripDetails.vue'
 import VehicleDetails from './pages/vehicles/VehicleDetails.vue';
+import VehicleNew from './pages/vehicles/VehicleNew.vue'
 import DriversList from './pages/drivers/DriversList.vue';
 import NotFound from './pages/NotFound.vue';
 import Analytics from './pages/analytics/Analytics.vue';
@@ -20,6 +21,7 @@ const router = createRouter({
       //     { path: "contact", component: ContactCoach }, // /coaches/c1/contact
       //   ],
     },
+    { path: '/vehicles/new', component: VehicleNew },
     { path: '/trips', component: TripsCalendar },
     {
       path: '/trips/:id',

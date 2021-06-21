@@ -1,5 +1,13 @@
 <template>
-  <h1 class="title is-4">Your vehicles</h1>
+  <div class="vehicle-list-header">
+    <h1 class="title is-4">Your vehicles</h1>
+    <button class="button is-primary" @click="$router.push('/vehicles/new')">
+      <span class="icon is-small">
+        <i class="fas fa-plus"></i>
+      </span>
+      <span>Tạo mới</span>
+    </button>
+  </div>
   <div class="field is-horizontal">
     <!-- <div class="field-label">
       <label class="label">From</label>
@@ -57,3 +65,11 @@ export default {
   methods: {}
 };
 </script>
+
+<style scoped>
+.vehicle-list-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+</style>

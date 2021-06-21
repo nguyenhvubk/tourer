@@ -27,6 +27,11 @@ body {
   margin: 0;
   background-color: #f7fcff !important;
 }
+/* img {
+  height: 100% !important; 
+  width: 100% !important;
+  object-fit: cover;
+} */
 /* #app { */
   /* font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

@@ -67,3 +67,11 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+img {
+  height: 100% !important; 
+  width: 100% !important;
+  object-fit: cover;
+}
+</style>

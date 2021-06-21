@@ -8,6 +8,10 @@ export default {
           id: '1',
           name: 'CX-5',
           brand: 'Mazda',
+          number: '51A-67258',
+          registriedDate: '2020-06-18',
+          insurancePeriod: '2021-06-18',
+          imgUrl: '"../../../assets/bmw.jpg"'
         },
         {
           id: '2',

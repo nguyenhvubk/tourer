@@ -229,8 +229,8 @@ export default {
           companyId: '1',
           vehicleId: '1',
           title: 'Toyota Vios - Sai Gon - Ha Noi',
-          startDate: '2021/06/01',
-          endDate: '2021/06/03',
+          startDate: '2021-06-01',
+          endDate: '2021-06-03',
           classes: ['orange'],
           revenue: 80000000
         },
@@ -239,8 +239,8 @@ export default {
           companyId: '1',
           vehicleId: '1',
           title: 'Toyota Vios - Sài gòn - Cần Thơ',
-          startDate: '2021/06/05',
-          endDate: '2021/06/08',
+          startDate: '2021-06-05',
+          endDate: '2021-06-08',
           classes: ['orange'],
           revenue: 80000000
         },
@@ -249,8 +249,8 @@ export default {
           companyId: '1',
           vehicleId: '1',
           title: 'Toyota Vios - Sài gòn - Nha Trang',
-          startDate: '2021/06/08',
-          endDate: '2021/06/15',
+          startDate: '2021-06-08',
+          endDate: '2021-06-15',
           classes: ['orange'],
           revenue: 80000000
         },
@@ -259,8 +259,8 @@ export default {
           companyId: '1',
           vehicleId: '1',
           title: 'Honda City - Sài gòn - Phan Thiết',
-          startDate: '2021/06/20',
-          endDate: '2021/06/25',
+          startDate: '2021-06-20',
+          endDate: '2021-06-25',
           classes: ['orange'],
           revenue: 80000000
         },
@@ -269,8 +269,8 @@ export default {
           companyId: '1',
           vehicleId: '2',
           title: 'Honda City - Sai Gon - Ha Noi',
-          startDate: '2021/06/02',
-          endDate: '2021/06/05',
+          startDate: '2021-06-02',
+          endDate: '2021-06-05',
           classes: ['purple'],
           revenue: 80000000
         },
@@ -279,8 +279,8 @@ export default {
           companyId: '1',
           vehicleId: '2',
           title: 'Honda City - Sài gòn - Cần Thơ',
-          startDate: '2021/06/05',
-          endDate: '2021/06/10',
+          startDate: '2021-06-05',
+          endDate: '2021-06-10',
           classes: ['purple'],
           revenue: 80000000
         },
@@ -289,8 +289,8 @@ export default {
           companyId: '1',
           vehicleId: '2',
           title: 'Honda City - Sài gòn - Nha Trang',
-          startDate: '2021/06/11',
-          endDate: '2021/06/20',
+          startDate: '2021-06-11',
+          endDate: '2021/-06-20',
           classes: ['purple'],
           revenue: 80000000
         },
@@ -299,8 +299,8 @@ export default {
           companyId: '1',
           vehicleId: '2',
           title: 'Honda City - Sài gòn - Phan Thiết',
-          startDate: '2021/06/23',
-          endDate: '2021/06/27',
+          startDate: '2021-06-23',
+          endDate: '2021-06-27',
           classes: ['purple'],
           revenue: 80000000
         },
@@ -485,7 +485,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
   justify-content: flex-start;
   align-items: center;
 }
