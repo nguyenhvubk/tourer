@@ -1,6 +1,6 @@
 <template>
   <div
-    class="column is-one-quarter-desktop is-one-third-tablet is-one-quarter-widescreen"
+    class="column is-one-quarter-desktop is-one-third-tablet is-one-quarter-widescreen is-full-mobile"
     @click="toDetails"
   >
     <div class="card">

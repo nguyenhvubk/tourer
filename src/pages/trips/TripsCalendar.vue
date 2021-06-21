@@ -1,4 +1,19 @@
 <template>
+<div class="tags-controller">
+  <div class="field" style="flex: 0 0 200px">
+    <div class="control">
+      <input class="input" type="text" placeholder="thêm lịch xe"> 
+    </div>
+  </div>
+  <div class="tags">
+    <span class="tag orange">Toyota Vios
+      <button class="delete is-small"></button>
+    </span>
+    <span class="tag purple">Honda City
+      <button class="delete is-small"></button>
+    </span>
+  </div>
+</div>
   <div class="calendar-parent">
     <calendar-view
       :items="items"
@@ -26,12 +41,9 @@
       @click-date="onClickDay"
       @click-item="onClickItem"
     >
-      <template v-slote:header #header="{ headerProps }">
-        <calendar-view-header
-          :header-props="headerProps"
-          @input="setShowDate"
-        />
-      </template>
+      <template slot:header #header="{ headerProps }">
+					<calendar-view-header :header-props="headerProps" @input="setShowDate" />
+				</template>
     </calendar-view>
   </div>
   <!-- <div id="calendar">
@@ -193,86 +205,166 @@ export default {
       useHolidayTheme: true,
       useTodayIcons: false,
       items: [
+        // {
+        //   id: 'e0',
+        //   startDate: '2018-01-05'
+        // },
+        // {
+        //   id: 'e1',
+        //   startDate: this.thisMonth(15, 18, 30)
+        // },
+        // {
+        //   id: 'e2',
+        //   startDate: this.thisMonth(15),
+        //   title: 'Single-day item with a long title'
+        // },
+        // {
+        //   id: 'e3',
+        //   startDate: this.thisMonth(7, 9, 25),
+        //   endDate: this.thisMonth(10, 16, 30),
+        //   title: 'Multi-day item with a long title and times'
+        // },
         {
-          id: 'e0',
-          startDate: '2018-01-05'
-        },
-        {
-          id: 'e1',
-          startDate: this.thisMonth(15, 18, 30)
-        },
-        {
-          id: 'e2',
-          startDate: this.thisMonth(15),
-          title: 'Single-day item with a long title'
-        },
-        {
-          id: 'e3',
-          startDate: this.thisMonth(7, 9, 25),
-          endDate: this.thisMonth(10, 16, 30),
-          title: 'Multi-day item with a long title and times'
-        },
-        {
-          id: 'e4',
-          startDate: this.thisMonth(20),
-          title: 'My Birthday!',
-          classes: ['birthday'],
-          url: 'https://en.wikipedia.org/wiki/Birthday'
-        },
-        {
-          id: 'e5',
-          startDate: this.thisMonth(5),
-          endDate: this.thisMonth(12),
-          title: 'Multi-day item',
-          classes: ['purple']
+          id: '1',
+          companyId: '1',
+          vehicleId: '1',
+          title: 'Toyota Vios - Sai Gon - Ha Noi',
+          startDate: '2021/06/01',
+          endDate: '2021/06/03',
+          classes: ['orange'],
+          revenue: 80000000
         },
         {
           id: '1',
-          title: 'Sai Gon - Ha Noi',
+          companyId: '1',
           vehicleId: '1',
-          startDate: this.thisMonth(5),
-          endDate: this.thisMonth(12)
+          title: 'Toyota Vios - Sài gòn - Cần Thơ',
+          startDate: '2021/06/05',
+          endDate: '2021/06/08',
+          classes: ['orange'],
+          revenue: 80000000
         },
         {
-          id: 'foo',
-          startDate: this.thisMonth(29),
-          title: 'Same day 1'
+          id: '1',
+          companyId: '1',
+          vehicleId: '1',
+          title: 'Toyota Vios - Sài gòn - Nha Trang',
+          startDate: '2021/06/08',
+          endDate: '2021/06/15',
+          classes: ['orange'],
+          revenue: 80000000
         },
         {
-          id: 'e6',
-          startDate: this.thisMonth(29),
-          title: 'Same day 2',
-          classes: ['orange']
+          id: '1',
+          companyId: '1',
+          vehicleId: '1',
+          title: 'Honda City - Sài gòn - Phan Thiết',
+          startDate: '2021/06/20',
+          endDate: '2021/06/25',
+          classes: ['orange'],
+          revenue: 80000000
         },
         {
-          id: 'e7',
-          startDate: this.thisMonth(29),
-          title: 'Same day 3'
+          id: '2',
+          companyId: '1',
+          vehicleId: '2',
+          title: 'Honda City - Sai Gon - Ha Noi',
+          startDate: '2021/06/02',
+          endDate: '2021/06/05',
+          classes: ['purple'],
+          revenue: 80000000
         },
         {
-          id: 'e8',
-          startDate: this.thisMonth(29),
-          title: 'Same day 4',
-          classes: ['orange']
+          id: '2',
+          companyId: '1',
+          vehicleId: '2',
+          title: 'Honda City - Sài gòn - Cần Thơ',
+          startDate: '2021/06/05',
+          endDate: '2021/06/10',
+          classes: ['purple'],
+          revenue: 80000000
         },
         {
-          id: 'e9',
-          startDate: '2021/6/16',
-          endDate: '2021/6/18',
-          title: 'Same day 5',
-          classes: ['yellow']
+          id: '2',
+          companyId: '1',
+          vehicleId: '2',
+          title: 'Honda City - Sài gòn - Nha Trang',
+          startDate: '2021/06/11',
+          endDate: '2021/06/20',
+          classes: ['purple'],
+          revenue: 80000000
         },
         {
-          id: 'e10',
-          startDate: this.thisMonth(29),
-          title: 'Same day 6',
-          classes: ['orange']
+          id: '2',
+          companyId: '1',
+          vehicleId: '2',
+          title: 'Honda City - Sài gòn - Phan Thiết',
+          startDate: '2021/06/23',
+          endDate: '2021/06/27',
+          classes: ['purple'],
+          revenue: 80000000
         },
-        {
-          id: 'e11',
-          startDate: this.thisMonth(29),
-          title: 'Same day 7'
-        }
+        // {
+        //   id: 'e4',
+        //   startDate: this.thisMonth(20),
+        //   title: 'My Birthday!',
+        //   classes: ['birthday'],
+        //   url: 'https://en.wikipedia.org/wiki/Birthday'
+        // },
+        // {
+        //   id: 'e5',
+        //   startDate: this.thisMonth(5),
+        //   endDate: this.thisMonth(12),
+        //   title: 'Multi-day item',
+        //   classes: ['purple']
+        // },
+        // {
+        //   id: '1',
+        //   title: 'Sai Gon - Ha Noi',
+        //   vehicleId: '1',
+        //   startDate: this.thisMonth(5),
+        //   endDate: this.thisMonth(12)
+        // },
+        // {
+        //   id: 'foo',
+        //   startDate: this.thisMonth(29),
+        //   title: 'Same day 1'
+        // },
+        // {
+        //   id: 'e6',
+        //   startDate: this.thisMonth(29),
+        //   title: 'Same day 2',
+        //   classes: ['orange']
+        // },
+        // {
+        //   id: 'e7',
+        //   startDate: this.thisMonth(29),
+        //   title: 'Same day 3'
+        // },
+        // {
+        //   id: 'e8',
+        //   startDate: this.thisMonth(29),
+        //   title: 'Same day 4',
+        //   classes: ['orange']
+        // },
+        // {
+        //   id: 'e9',
+        //   startDate: '2021/6/16',
+        //   endDate: '2021/6/18',
+        //   title: 'Same day 5',
+        //   classes: ['yellow']
+        // },
+        // {
+        //   id: 'e10',
+        //   startDate: this.thisMonth(29),
+        //   title: 'Same day 6',
+        //   classes: ['orange']
+        // },
+        // {
+        //   id: 'e11',
+        //   startDate: this.thisMonth(29),
+        //   title: 'Same day 7'
+        // }
       ]
     };
   },
@@ -389,6 +481,20 @@ body {
   background-color: #f7fcff; */
 /* } */
 
+.tags-controller {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  margin-bottom: 10px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.tags-controller > div {
+  /* background-color: red; */
+  margin-right: 5px;
+}
+
 #calendar {
   display: flex;
   flex-direction: column;
@@ -414,8 +520,8 @@ body {
   overflow-x: hidden;
   overflow-y: hidden;
   /* max-height: 80vh; */
-  /* min-height: 85vh; */
-  min-height: 40rem;
+  min-height: 80vh;
+  /* min-height: 40rem; */
   background-color: white;
 }
 

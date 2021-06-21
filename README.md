@@ -40,3 +40,49 @@ for staging
 - firebase DB implement
 - Authentication
 - Styling optimization
+
+draff of db structure
+{
+  "companies": {
+    "company_id1": {
+      "name": "company A",
+      "type": "vehicle supplier",
+      //other nessesary information
+    }  
+  },
+  "users": {
+    "user_id1": {
+      "name": "user A",
+      //other nessesary information
+      "company": "company_id1"
+    }
+  },
+  "vehicles": {
+    "vehicle_id1": {
+      "brand": "toyota",
+      //other nessesary information
+      "driver": "driver_id1",
+      "tag": "color"
+    }
+  },
+  "vehicles_company": {
+    "generatedID": {
+      "vehicle": "vehicle_id1",
+      "company": "company_id1"
+    }
+  }
+  "drivers": {
+    "driver_id1": {
+      //some information
+    }
+  },
+  "trips": {
+    "trip_id1": {
+      "company": "company_id1",
+      "vehicle": "vehicle_id1",
+      "startDate": "2021/06/16",
+      "endDate": "2021/06/19"
+      //some other information
+    }
+  }
+}

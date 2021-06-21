@@ -68,6 +68,15 @@ having to override as much.
 	text-overflow: ellipsis;
 }
 
+/* TODO: this is temporary handles for vehicle color display on calendar */
+.tag.orange {
+	background-color: #ffe7d0;
+	border-color: #f7e0c7;
+}
+.tag.purple {
+	background-color: #f0e0ff;
+	border-color: #e7d7f7;
+}
 .theme-default .cv-item.purple {
 	background-color: #f0e0ff;
 	border-color: #e7d7f7;
