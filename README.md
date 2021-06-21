@@ -38,11 +38,12 @@ TODO: for demo
 - handle router scroll behavior
 - auth
  - login
+ - route validate for non-auth users - server side ?
 
-for staging
-- DB structure design
-- firebase DB implement
-- Styling optimization
+firebase
+- DB structure design - almost done
+- firebase SDK implement
+
 
 draff of db structure
 {

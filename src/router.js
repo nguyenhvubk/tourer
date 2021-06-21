@@ -7,6 +7,7 @@ import VehicleNew from './pages/vehicles/VehicleNew.vue'
 import DriversList from './pages/drivers/DriversList.vue';
 import NotFound from './pages/NotFound.vue';
 import Analytics from './pages/analytics/Analytics.vue';
+import Login from './pages/auth/Login.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -30,6 +31,7 @@ const router = createRouter({
     },
     { path: '/drivers', component: DriversList },
     { path: '/analytics', component: Analytics },
+    { path: '/login', component: Login },
     { path: '/:notFound(.*)', component: NotFound }
   ]
 });
